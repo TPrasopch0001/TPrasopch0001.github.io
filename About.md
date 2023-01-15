@@ -2,6 +2,11 @@
 layout: page
 title: About Page
 permalink: /about/
+html:
+    head:
+        title: kldjasldja
+    body:
+        jdklajad;lfs
 ---
 
 # Testing code
