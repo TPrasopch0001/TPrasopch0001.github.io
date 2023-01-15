@@ -1,8 +1,9 @@
 ---
 layout: page
-title: "main"
+title: Main Page
 permalink: /main/
 ---
 
 # Testing code
 
+Hello World
