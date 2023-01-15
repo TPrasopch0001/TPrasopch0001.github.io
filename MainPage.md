@@ -1,5 +1,7 @@
-# Code for main page
 
 layout: page
 title: "main"
-permalink: /main
+permalink: /main/
+
+# Testing code
+
