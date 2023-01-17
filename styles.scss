@@ -1,13 +1,35 @@
 $global-dark: #444;
 $global-light: #ddd;
+$global-blue: rgb(164, 219, 227);
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+html, body
+{
+    width: 100%;
+}
 
 body
 {
+    margin-left: 1.5rem;
+    font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
     background: $global-dark;
     color: $global-light;
 
-    h1
+    > h1
     {
         font-style: italic;
     }
+    a
+    {
+        color: $global-blue;
+        text-decoration: none;
+        &:hover
+        {
+            text-decoration: underline;
+        }
+        &:visited
+        {
+            font-style: italic;
+        }
+    }
+
 }
