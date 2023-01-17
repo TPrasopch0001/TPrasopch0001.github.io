@@ -1,0 +1,13 @@
+$global-dark: #444;
+$global-light: #ddd;
+
+body
+{
+    background: $global-dark;
+    color: $global-light;
+
+    h1
+    {
+        font-style: italic;
+    }
+}

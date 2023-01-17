@@ -6,8 +6,8 @@
     <body>
         <h2> A bit about me</h2>
         <p id="ageIntro">
-            I am 
-        <script src="ageCalc.js"></script>
+            I am <span id="ageCalc"></span>
+        
         and I go to Illinois Institute of Technology as a CS major. This site will be used to house some small projects as a means of teaching myself
         <ul>
             <li>HTML</li>
@@ -18,6 +18,17 @@
         <p>
             <a href="https://tprasopch0001.github.io/about" title="About Page"> About This Site</a>
         </p>
+        <script>
+            let today = new Date().toLocaleDateString().split("/")
+            let bday = new Date("2003-08-19").toLocaleDateString().split("/")
+            if((today[0] >= bday[0]) && (today[1] >= bday[1])){
+                var age = (new Date().toLocaleDateString().split("/")[2] - (new Date("2003-08-19").toLocaleDateString().split("/")[2]))
+            }
+            else{
+                var age = (new Date().toLocaleDateString().split("/")[2] - (new Date("2003-08-19").toLocaleDateString().split("/")[2]))-1
+            }
+            document.getElementById("ageCalc").innerText = (age + " years old")
+        </script>
     </body>
 
 </html>
