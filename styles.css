@@ -11,13 +11,6 @@ body {
   color: #ddd;
 }
 
-a {
-  text-decoration: none !important;
-}
-a:hover {
-  text-decoration: none !important;
-}
-
 .navBar {
   width: 100%;
   height: fit-content;
@@ -46,6 +39,9 @@ a:hover {
 }
 .navBar li a:hover:where(:not(.active)) {
   background: rgb(110, 171, 166);
+}
+.navBar li a:hover {
+  text-decoration: none !important;
 }
 .navBar li .active {
   background-color: rgb(110, 171, 166);
@@ -136,16 +132,16 @@ a:hover {
 .colcontent:hover {
   opacity: 1;
 }
-.colcontent:hover .card-text {
-  opacity: 1;
-  transform: translateY(250px);
-  -webkit-transform: translateY(250px);
-}
 .colcontent .card-text {
   height: 0;
   opacity: 1;
   transition-delay: 0s;
   transition-duration: 0.4s;
+}
+.colcontent .card-text:hover {
+  opacity: 1;
+  transform: translateY(250px);
+  -webkit-transform: translateY(250px);
 }
 
 /*# sourceMappingURL=styles.css.map */
