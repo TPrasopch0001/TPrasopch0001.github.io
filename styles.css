@@ -16,7 +16,7 @@ html, body {
   padding: 0;
   list-style-type: none;
   background-color: rgb(164, 219, 227);
-  color: #444;
+  color: rgb(40, 39, 45);
   overflow: hidden;
   border-bottom: 2px solid black;
 }
@@ -26,7 +26,7 @@ html, body {
 .navBar li a {
   display: block;
   text-align: center;
-  color: #444;
+  color: rgb(40, 39, 45);
   padding: 14px 16px;
   text-decoration: none;
 }
@@ -38,7 +38,7 @@ html, body {
 .main-page {
   margin: 0;
   font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
-  background: #444;
+  background: rgb(40, 39, 45);
   color: #ddd;
 }
 .main-page #maincontent {
@@ -73,7 +73,7 @@ html, body {
 .card-page {
   margin: 0;
   font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
-  background: #444;
+  background: rgb(40, 39, 45);
   color: #ddd;
 }
 .card-page #card {
@@ -96,7 +96,7 @@ html, body {
   border: none;
   border-radius: 0.5rem;
   background: rgb(164, 219, 227);
-  color: #444;
+  color: rgb(40, 39, 45);
   font-size: 1rem;
   cursor: pointer;
 }
