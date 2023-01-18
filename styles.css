@@ -99,28 +99,6 @@ a:hover {
 .main-page > h1 {
   font-style: italic;
 }
-.main-page #miscInfo {
-  text-align: center;
-  position: relative;
-  top: 100%;
-  margin-left: auto;
-  margin-right: 90%;
-  background-color: rgb(110, 171, 166);
-  transition: background-color 1s 0s ease-out;
-}
-.main-page #miscInfo:hover {
-  background-color: rgb(60, 94, 92);
-}
-.main-page a {
-  color: #ddd;
-  text-decoration: none;
-}
-.main-page a:hover {
-  text-decoration: underline;
-}
-.main-page a:visited {
-  font-style: italic;
-}
 
 .card-page #card {
   height: 60vh;
@@ -150,7 +128,9 @@ a:hover {
   background-color: rgb(110, 171, 166);
 }
 
-.cardImg {
+.collection-page .cardImg {
+  float: left;
+  margin: 1em;
   position: relative;
   padding: 0;
   display: block;
@@ -159,12 +139,11 @@ a:hover {
   height: 400px;
   width: 300px;
 }
-
-.colcontent {
+.collection-page .colcontent {
   margin: auto;
   padding: 50% 0;
   opacity: 0;
-  font-size: 40px;
+  font-size: 2vw;
   position: absolute;
   top: 0;
   color: #1c87c9;
@@ -178,21 +157,44 @@ a:hover {
   transition: all 400ms ease-out;
   text-align: center;
 }
-.colcontent:hover {
+.collection-page .colcontent:hover {
   opacity: 1;
 }
-.colcontent:hover .card-text {
+.collection-page .colcontent:hover .card-text {
   height: inherit;
   width: inherit;
   opacity: 1;
   transform: translateY(250px);
   -webkit-transform: translateY(250px);
 }
-.colcontent .card-text {
+.collection-page .colcontent .card-text {
   height: 0;
   opacity: 1;
   transition-delay: 0s;
   transition-duration: 0.4s;
+}
+
+.about-page {
+  display: inline-block;
+}
+.about-page .codeDesc {
+  position: absolute;
+}
+.about-page #codeContainer {
+  position: relative;
+  height: 50px;
+  width: auto;
+  color: rgb(9, 220, 9);
+  border: 1px solid white;
+  background-color: black;
+}
+.about-page #codeContainer > span {
+  position: absolute;
+  bottom: 0;
+  left: 5px;
+}
+.about-page #codeContainer #code {
+  left: 1rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
