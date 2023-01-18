@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap");
-html, body {
+html,
+body {
   width: 100%;
 }
 
@@ -47,7 +48,47 @@ a:hover {
 .navBar li a:hover:where(:not(.active)) {
   background: rgb(110, 171, 166);
 }
-.navBar li .active {
+.navBar div.dropdown {
+  float: left;
+  overflow: hidden;
+}
+.navBar div.dropdown .drop-button {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: rgb(40, 39, 45);
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+.navBar div.dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(164, 219, 227);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.navBar div.dropdown .dropdown-content a {
+  float: none;
+  color: rgb(40, 39, 45);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.navBar div.dropdown .dropdown-content a:hover {
+  background-color: rgb(110, 171, 166);
+}
+.navBar div.dropdown .dropdown-content a:hover {
+  background-color: rgb(110, 171, 166);
+}
+.navBar div.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.active {
   background-color: rgb(110, 171, 166);
 }
 
