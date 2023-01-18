@@ -1,25 +1,26 @@
-$global-dark: rgb(40,39,45);
+$global-dark: rgb(40, 39, 45);
 $global-light: #ddd;
 $global-blue: rgb(164, 219, 227);
 $global-green-blue: rgb(110, 171, 166);
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
-html, body
-{
+
+html,
+body {
     width: 100%;
 }
 
-body
-{
+body {
     margin: 0;
     font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
     background: $global-dark;
     color: $global-light;
 }
 
-a{
+a {
     text-decoration: none !important;
-    &:hover{
+
+    &:hover {
         text-decoration: none !important;
     }
 }
@@ -30,46 +31,96 @@ a{
     margin: 0;
     padding: 0;
     margin-bottom: 1rem;
-    ul{
+
+    ul {
         margin: 0;
         padding: 0;
         list-style-type: none;
         background-color: $global-blue;
         color: $global-dark;
-        overflow:hidden;
+        overflow: hidden;
         border-bottom: 2px solid black;
     }
-    li{
+
+    li {
         float: left;
-        a{
+
+        a {
             display: block;
             text-align: center;
             color: $global-dark;
             padding: 14px 16px;
             text-decoration: none;
-            &:hover:where(:not(.active)){
+
+            &:hover:where(:not(.active)) {
                 background: $global-green-blue;
             }
         }
-        .active{
-            background-color:$global-green-blue;
+
+    }
+
+    div.dropdown {
+        float: left;
+        overflow: hidden;
+
+        .drop-button {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: $global-dark;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
         }
-  }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: $global-blue;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+
+            a {
+                float: none;
+                color: $global-dark;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+
+                &:hover {
+                    background-color: $global-green-blue;
+                }
+            }
+        }
+
+        .dropdown-content a:hover {
+            background-color: $global-green-blue;
+        }
+
+        &:hover .dropdown-content {
+            display: block;
+        }
+    }
 }
 
 
+.active {
+    background-color: $global-green-blue;
+}
 
-.content
-  {
+.content {
     margin: 1rem;
 }
-.main-page
-{
-    > h1
-    {
+
+.main-page {
+    > h1 {
         font-style: italic;
     }
-    #miscInfo{
+
+    #miscInfo {
         text-align: center;
         position: relative;
         top: 100%;
@@ -77,105 +128,106 @@ a{
         margin-right: 90%;
         background-color: $global-green-blue;
         transition: background-color 1s 0s ease-out;
-        &:hover
-        {
+
+        &:hover {
             background-color: rgb(60, 94, 92);
         }
     }
 
-    a
-    {
+    a {
         color: $global-light;
         text-decoration: none;
-        &:hover
-        {
+
+        &:hover {
             text-decoration: underline;
         }
-        &:visited
-        {
+
+        &:visited {
             font-style: italic;
         }
     }
 
 
 }
-.card-page
-{
-    #card{
+
+.card-page {
+    #card {
         height: 60vh;
         width: auto;
         text-align: center;
         display: block;
-        margin-left:auto;
-        margin-right:auto;
+        margin-left: auto;
+        margin-right: auto;
     }
-    .button-group
-    {
+
+    .button-group {
         display: flex;
         justify-content: center;
         margin-top: 1rem;
         margin-bottom: 1rem;
 
-        button
-        {
-        margin: 0 0.5rem;
-        padding: 0.5rem 1rem;
-        border: none;
-        border-radius: 0.5rem;
-        background: $global-blue;
-        color: $global-dark;
-        font-size: 1rem;
-        cursor:pointer;
-        &:hover
-        {
-            background-color: $global-green-blue;
+        button {
+            margin: 0 0.5rem;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 0.5rem;
+            background: $global-blue;
+            color: $global-dark;
+            font-size: 1rem;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $global-green-blue;
+            }
         }
     }
 }
-}
 
 
-.cardImg{
+.cardImg {
     position: relative;
-    padding:0;
+    padding: 0;
     display: block;
     cursor: pointer;
-    overflow:hidden;
+    overflow: hidden;
     height: 400px;
     width: 300px;
 }
-.colcontent
-{
-        margin: auto;
-        padding: 50% 0;
-        opacity: 0;
-        font-size: 40px;
-        position: absolute;
-        top:0;
-        color: #1c87c9;
-        background-color: rgba(200, 200, 200, 0.5);
-        width: inherit;
-        height: inherit;
-        -webkit-transition: all 400ms ease-out;
-        -moz-transition: all 400ms ease-out;
-        -o-transition: all 400ms ease-out;
-        -ms-transition: all 400ms ease-out;
-        transition: all 400ms ease-out;
-        text-align: center;
-        &:hover{
-            opacity:1;
-            .card-text{
-                height:inherit;
-                width:inherit;
-                opacity: 1;
-                transform: translateY(250px);
-                -webkit-transform: translateY(250px);
-            }
-        }
-        .card-text{
-            height: 0;
+
+.colcontent {
+    margin: auto;
+    padding: 50% 0;
+    opacity: 0;
+    font-size: 40px;
+    position: absolute;
+    top: 0;
+    color: #1c87c9;
+    background-color: rgba(200, 200, 200, 0.5);
+    width: inherit;
+    height: inherit;
+    -webkit-transition: all 400ms ease-out;
+    -moz-transition: all 400ms ease-out;
+    -o-transition: all 400ms ease-out;
+    -ms-transition: all 400ms ease-out;
+    transition: all 400ms ease-out;
+    text-align: center;
+
+    &:hover {
+        opacity: 1;
+
+        .card-text {
+            height: inherit;
+            width: inherit;
             opacity: 1;
-            transition-delay: 0s;
-            transition-duration: 0.4s;
+            transform: translateY(250px);
+            -webkit-transform: translateY(250px);
+        }
+    }
+
+    .card-text {
+        height: 0;
+        opacity: 1;
+        transition-delay: 0s;
+        transition-duration: 0.4s;
     }
 }
