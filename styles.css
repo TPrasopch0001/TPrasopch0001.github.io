@@ -11,6 +11,13 @@ body {
   color: #ddd;
 }
 
+a {
+  text-decoration: none !important;
+}
+a:hover {
+  text-decoration: none !important;
+}
+
 .navBar {
   width: 100%;
   height: fit-content;
@@ -39,9 +46,6 @@ body {
 }
 .navBar li a:hover:where(:not(.active)) {
   background: rgb(110, 171, 166);
-}
-.navBar li a:hover {
-  text-decoration: none !important;
 }
 .navBar li .active {
   background-color: rgb(110, 171, 166);
@@ -111,17 +115,21 @@ body {
   display: block;
   cursor: pointer;
   overflow: hidden;
+  height: 400px;
+  width: 300px;
 }
 
 .colcontent {
+  margin: auto;
+  padding: 50% 0;
   opacity: 0;
   font-size: 40px;
   position: absolute;
   top: 0;
   color: #1c87c9;
   background-color: rgba(200, 200, 200, 0.5);
-  width: 200px;
-  height: 200px;
+  width: inherit;
+  height: inherit;
   -webkit-transition: all 400ms ease-out;
   -moz-transition: all 400ms ease-out;
   -o-transition: all 400ms ease-out;
@@ -132,16 +140,18 @@ body {
 .colcontent:hover {
   opacity: 1;
 }
+.colcontent:hover .card-text {
+  height: inherit;
+  width: inherit;
+  opacity: 1;
+  transform: translateY(250px);
+  -webkit-transform: translateY(250px);
+}
 .colcontent .card-text {
   height: 0;
   opacity: 1;
   transition-delay: 0s;
   transition-duration: 0.4s;
-}
-.colcontent .card-text:hover {
-  opacity: 1;
-  transform: translateY(250px);
-  -webkit-transform: translateY(250px);
 }
 
 /*# sourceMappingURL=styles.css.map */

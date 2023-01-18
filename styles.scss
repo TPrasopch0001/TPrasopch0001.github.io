@@ -141,17 +141,21 @@ a{
     display: block;
     cursor: pointer;
     overflow:hidden;
+    height: 400px;
+    width: 300px;
 }
 .colcontent
 {
+        margin: auto;
+        padding: 50% 0;
         opacity: 0;
         font-size: 40px;
         position: absolute;
         top:0;
         color: #1c87c9;
         background-color: rgba(200, 200, 200, 0.5);
-        width: 200px;
-        height: 200px;
+        width: inherit;
+        height: inherit;
         -webkit-transition: all 400ms ease-out;
         -moz-transition: all 400ms ease-out;
         -o-transition: all 400ms ease-out;
@@ -161,6 +165,8 @@ a{
         &:hover{
             opacity:1;
             .card-text{
+                height:inherit;
+                width:inherit;
                 opacity: 1;
                 transform: translateY(250px);
                 -webkit-transform: translateY(250px);
