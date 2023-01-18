@@ -4,19 +4,25 @@
         <link rel="stylesheet" href="./styles.css" >
     </head>
 
-    <body>
-        <h2> A bit about me</h2>
-        <p id="ageIntro">
-            I am <span id="ageCalc"></span> and I go to Illinois Institute of Technology as a CS major. This site will be used to house some small projects as a means of teaching myself
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>Javascript</li>
-        </ul>
-        </p>
-        <p>
-            <a href="https://tprasopch0001.github.io/about" title="About Page"> About This Site</a>
-        </p>
+    <body class="main-page">
+        <div class="navBar">
+            <ul>
+                <li><a href="https://tprasopch0001.github.io/" title="Home Page">Home</a> </li>
+                <li><a href="https://tprasopch0001.github.io/about" title="About Page" > About This Site</a></li>
+                <li><a href="./cards.html" title="Collection Page">Few Collections I Have</a> </li>
+            </ul>
+        </div>
+        <div id="maincontent">
+            <h2> A bit about me</h2>
+            <p id="ageIntro">
+                I am <span id="ageCalc"></span> and I go to Illinois Institute of Technology as a CS major. This site will be used to house some small projects as a means of teaching myself
+            <ul >
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Javascript</li>
+            </ul>
+            </p>
+        </div>
         <script>
             let today = new Date().toLocaleDateString().split("/")
             let bday = new Date("2003-08-19").toLocaleDateString().split("/")
