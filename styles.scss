@@ -9,6 +9,15 @@ html, body
     width: 100%;
 }
 
+body
+{
+    margin: 0;
+    font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+    background: $global-dark;
+    color: $global-light;
+}
+
+
 .navBar {
     width: 100%;
     height: fit-content;
@@ -26,6 +35,7 @@ html, body
     }
     li{
         float: left;
+        
     }
     li a{
         display: block;
@@ -37,19 +47,17 @@ html, body
             border: none;
             background: $global-green-blue;
         }
+        :focus{
+            background-color:rgb(0, 143, 133);
+        }
     }
   }
-
+.content
+  {
+    margin: 1rem;
+}
 .main-page
 {
-    #maincontent{
-        margin: 1rem;
-    }
-    margin: 0;
-    font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
-    background: $global-dark;
-    color: $global-light;
-
     > h1
     {
         font-style: italic;
@@ -86,10 +94,6 @@ html, body
 }
 .card-page
 {
-    margin: 0;
-    font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
-    background: $global-dark;
-    color: $global-light;
     #card{
         height: 60vh;
         width: auto;

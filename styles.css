@@ -4,6 +4,13 @@ html, body {
   width: 100%;
 }
 
+body {
+  margin: 0;
+  font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+  background: rgb(40, 39, 45);
+  color: #ddd;
+}
+
 .navBar {
   width: 100%;
   height: fit-content;
@@ -34,16 +41,14 @@ html, body {
   border: none;
   background: rgb(110, 171, 166);
 }
-
-.main-page {
-  margin: 0;
-  font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
-  background: rgb(40, 39, 45);
-  color: #ddd;
+.navBar li a :focus {
+  background-color: rgb(0, 143, 133);
 }
-.main-page #maincontent {
+
+.content {
   margin: 1rem;
 }
+
 .main-page > h1 {
   font-style: italic;
 }
@@ -70,12 +75,6 @@ html, body {
   font-style: italic;
 }
 
-.card-page {
-  margin: 0;
-  font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
-  background: rgb(40, 39, 45);
-  color: #ddd;
-}
 .card-page #card {
   height: 60vh;
   width: auto;
