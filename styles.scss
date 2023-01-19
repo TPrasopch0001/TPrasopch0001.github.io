@@ -15,6 +15,50 @@ $global-green-blue: rgb(110, 171, 166);
         color:black;
     }
 }
+@keyframes helloWorldText{
+    0%{
+        content:"";
+    }
+    8%{
+        content:"";
+    }
+    16%{
+        content:"H";
+    }
+    24%{
+        content:"He";
+    }
+    32%{
+        content:"Hel";
+    }
+    40%{
+        content:"Hell";
+    }
+    48%{
+        content:"Hello";
+    }
+    56%{
+        content:"Hello ";
+    }
+    64%{
+        content:"Hello W";
+    }
+    72%{
+        content:"Hello Wo";
+    }
+    80%{
+        content:"Hello Wor";
+    }
+    88%{
+        content:"Hello Worl";
+    }
+    96%{
+        content:"Hello World";
+    }
+    100%{
+        content:"Hello World";
+    }
+}
 html,
 body {
     width: 100%;
@@ -234,22 +278,23 @@ a {
             border: 1px solid white;
             background-color:black;
             span{
-                top:50%;
                 margin-top:50px;
-                left: 5px;
                 margin-left:5px;
                 display:inline-block;
                 
             }
-            #code
-                {
-                    display:inline-block;
-                    left: 1rem;
-                }
+        #code:before
+            {   
+                content:"";
+                animation-name: helloWorldText;
+                animation-duration: 2s;
+                animation-delay: 2s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+            }
             #insertIcon{
                 font-size:smaller;
                 font-weight: 400;
-                display:inline-block;
                 animation-name: insertIconAnim;
                 animation-duration: .75s;
                 animation-iteration-count: infinite;

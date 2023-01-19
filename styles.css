@@ -11,6 +11,50 @@
     color: black;
   }
 }
+@keyframes helloWorldText {
+  0% {
+    content: "";
+  }
+  8% {
+    content: "";
+  }
+  16% {
+    content: "H";
+  }
+  24% {
+    content: "He";
+  }
+  32% {
+    content: "Hel";
+  }
+  40% {
+    content: "Hell";
+  }
+  48% {
+    content: "Hello";
+  }
+  56% {
+    content: "Hello ";
+  }
+  64% {
+    content: "Hello W";
+  }
+  72% {
+    content: "Hello Wo";
+  }
+  80% {
+    content: "Hello Wor";
+  }
+  88% {
+    content: "Hello Worl";
+  }
+  96% {
+    content: "Hello World";
+  }
+  100% {
+    content: "Hello World";
+  }
+}
 html,
 body {
   width: 100%;
@@ -201,20 +245,21 @@ a:hover {
   background-color: black;
 }
 .about-page #codeContainer span {
-  top: 50%;
   margin-top: 50px;
-  left: 5px;
   margin-left: 5px;
   display: inline-block;
 }
-.about-page #codeContainer #code {
-  display: inline-block;
-  left: 1rem;
+.about-page #codeContainer #code:before {
+  content: "";
+  animation-name: helloWorldText;
+  animation-duration: 2s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 .about-page #codeContainer #insertIcon {
   font-size: smaller;
   font-weight: 400;
-  display: inline-block;
   animation-name: insertIconAnim;
   animation-duration: 0.75s;
   animation-iteration-count: infinite;

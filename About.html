@@ -28,7 +28,7 @@
             </h2>
         <div id="codeContainer">
             <span class="codeDetail"> > </span>
-            <span id="code">&nbsp;</span>
+            <span id="code"></span>
             <span id="insertIcon"> &#9602; </span>
         </div>
     </div>
@@ -40,12 +40,4 @@
         </div>
     </div>
 </body>
-<script src="helloworld.js"></script>
-<script>
-    var codeText = document.getElementsByClassName("content")[0];
-    codeText.addEventListener('touchstart',function() {printText()});
-    codeText.addEventListener('touchend', function(){removeText()});
-    codeText.addEventListener('mouseenter', function(){printText()});
-    codeText.addEventListener('mouseleave',function() {removeText()});
-</script>
 </html>
