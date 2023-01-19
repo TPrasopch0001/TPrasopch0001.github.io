@@ -1,7 +1,7 @@
 let text = new Array();
 text = ['H','e','l','l','o',' ','W','o','r','l','d'];
 var codeSect = document.getElementById("code");
-let string ="";
+let string = "";
 
 function delay(milliseconds){
     return new Promise(resolve => {
@@ -23,5 +23,4 @@ async function removeText(){
     codeSect.innerText = string;
     }
     await delay(100);
-    codeSect.innerHTML = "Hello World";
 }
